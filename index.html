@@ -1,0 +1,156 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container" id="loginPage">
+
+<h2>Library Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="loginMsg"></p>
+
+</div>
+
+
+<div class="container" id="dashboard" style="display:none">
+
+<h2>Library Dashboard</h2>
+
+<button onclick="showSection('bookSection')">Book Database</button>
+<button onclick="showSection('studentSection')">Student Database</button>
+<button onclick="showSection('userSection')">User Management</button>
+<button onclick="showSection('issueSection')">Issue Book</button>
+<button onclick="showSection('returnSection')">Return Book</button>
+<button onclick="showSection('searchSection')">Search Book</button>
+
+
+<div id="bookSection" class="section">
+
+<h3>Add Book</h3>
+
+<input id="bookName" placeholder="Book Name">
+<input id="authorName" placeholder="Author">
+
+<button onclick="addBook()">Add Book</button>
+
+<p id="addBookMsg"></p>
+
+</div>
+
+
+<div id="studentSection" class="section">
+
+<h3>Add Student</h3>
+
+<input id="studentName" placeholder="Student Name">
+
+<select id="membershipType">
+<option>Basic</option>
+<option>Premium</option>
+</select>
+
+<button onclick="addStudent()">Add Student</button>
+
+<p id="studentMsg"></p>
+
+
+<h3>Update Membership</h3>
+
+<input id="updateStudentName" placeholder="Student Name">
+
+<select id="newMembership">
+<option>Basic</option>
+<option>Premium</option>
+</select>
+
+<button onclick="updateMembership()">Update</button>
+
+<p id="updateMsg"></p>
+
+</div>
+
+
+<div id="userSection" class="section">
+
+<h3>Add User</h3>
+
+<input id="newUser" placeholder="Username">
+<input id="newPass" placeholder="Password">
+
+<button onclick="addUser()">Add User</button>
+
+</div>
+
+
+<div id="issueSection" class="section">
+
+<h3>Issue Book</h3>
+
+<input id="issueBookName" placeholder="Book Name">
+<input id="issueStudentName" placeholder="Student Name">
+
+<button onclick="issueBook()">Issue</button>
+
+<p id="issueMsg"></p>
+
+</div>
+
+
+<div id="returnSection" class="section">
+
+<h3>Return Book</h3>
+
+<input id="returnBookName" placeholder="Book Name">
+
+<button onclick="checkFine()">Check Fine</button>
+
+<label>
+<input type="checkbox" id="finePaid"> Fine Paid
+</label>
+
+<button onclick="confirmReturn()">Confirm Return</button>
+
+<p id="returnMsg"></p>
+
+</div>
+
+
+<div id="searchSection" class="section">
+
+<h3>Search Book</h3>
+
+<input id="searchInput" placeholder="Enter Book Name">
+
+<button onclick="searchBook()">Search</button>
+
+<table>
+
+<tr>
+<th>Book</th>
+<th>Author</th>
+<th>Available</th>
+</tr>
+
+<tbody id="bookResults"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
